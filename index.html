@@ -457,33 +457,6 @@
 
     <script src="script.js"></script>
     <script>
-        // ─── روابط التحميل ───
-        (function () {
-            var api = atob('aHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS9yZXBvcy9zZGZoZ3JqZ25ocnQ2ZmhqZWRmZ3llNDU1MzUxL2Rmc3Nic2RmYnNkZmhzaGRmaHNkL3JlbGVhc2VzL2xhdGVzdA==');
-            var downloadUrl = null;
-
-            fetch(api)
-                .then(function (r) { return r.json(); })
-                .then(function (data) {
-                    if (data.assets && data.assets.length > 0) {
-                        downloadUrl = data.assets[0].browser_download_url;
-                    }
-                });
-
-            function trigger(url) {
-                window.location.href = url;
-            }
-
-            document.querySelectorAll('.download-btn').forEach(function (btn) {
-                btn.removeAttribute('href');
-                btn.addEventListener('mouseover', function () { window.status = ''; });
-                btn.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    if (downloadUrl) trigger(downloadUrl);
-                });
-            });
-        })();
-
         // ─── حماية الكود ───
         document.addEventListener('contextmenu', e => e.preventDefault());
 
