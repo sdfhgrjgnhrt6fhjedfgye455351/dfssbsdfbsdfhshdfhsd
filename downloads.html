@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Lightcord for Windows 10/11 — Free Discord Mod v2.4.0</title>
+    <meta name="description" content="Download Lightcord for Windows 10/11. Pre-bundled with 350+ plugins, 500+ themes, and native 3D Voice.">
+
+    <!-- Discord / Open Graph Embed -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Download Lightcord — Free for Windows 10/11">
+    <meta property="og:description" content="Download Lightcord and unlock 350+ plugins, 500+ themes, 3D spatial voice, and zero background telemetry. Free, fast, built for power users.">
+    <meta property="og:image" content="https://lightcord.one/assets/logo.png">
+    <meta property="og:url" content="https://lightcord.one/downloads.html">
+    <meta name="theme-color" content="#5865f2">
+
+    <meta name="keywords" content="Lightcord, lightcord discord, lightcord download, discord lightcord, download lightcord, how to uninstall lightcord, lightcord discord download, lightcord github, lightcord installer, lightcord mobile, lightcord alternative, betterdiscord lightcord, custom discord client, lightcord themes download, lightcord plugins 2025, discord modification, Discord mod, Discord client mod, Discord enhancement, Discord themes, Discord plugins, Discord custom themes, Discord dark theme, Discord 3D theme, 3D Discord, Discord makeover, Discord UI mod, BetterDiscord alternative, Discord modded client, Discord skin, Discord custom client, Discord plugin manager, Discord theme installer, cool Discord themes, best Discord mods, Discord aesthetic, Discord glow effect, Discord animated theme, Discord transparent theme, Discord glassmorphism, Discord midnight theme, Discord dark matter, Discord free download, Discord Windows mod, Discord macOS mod, Discord client 2025, Discord enhancement project, Discord rich presence custom, Discord overlay">
+    
+    <!-- Requirement 1: Pure lightning bolt emblem ONLY for tab icon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon-bolt.svg">
+    <link rel="icon" type="image/png" href="assets/favicon-bolt.png">
+    <link rel="apple-touch-icon" href="assets/favicon-bolt.png">
+    <link rel="canonical" href="https://lightcord.one/downloads.html">
+
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Lightcord",
+      "operatingSystem": "Windows 10, Windows 11",
+      "applicationCategory": "CommunicationApplication",
+      "softwareVersion": "2.4.0",
+      "description": "Download Lightcord for Windows and unlock 350+ plugins, 500+ themes, 3D spatial voice, and zero background telemetry. Free, fast, built for power users.",
+      "url": "https://lightcord.one/downloads.html",
+      "downloadUrl": "https://lightcord.one/downloads.html",
+      "screenshot": "https://lightcord.one/assets/screenshot-settings.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "2847"
+      }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .downloads-hero {
+            padding: 130px 0 50px;
+            text-align: center;
+        }
+        .downloads-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 12px;
+        }
+        .installation-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 50px 0;
+        }
+        .step-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 14px;
+            padding: 26px;
+        }
+        .step-num {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: var(--indigo-primary);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 14px;
+        }
+        .step-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+        .step-card p {
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+        @media (max-width: 860px) {
+            .installation-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @keyframes dlFadeUp {
+            from { opacity: 0; transform: translateY(22px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes dlCardPop {
+            from { opacity: 0; transform: translateY(28px) scale(0.97); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        @keyframes dlFadeOut {
+            from { opacity: 1; transform: translateY(0); }
+            to   { opacity: 0; transform: translateY(-14px); }
+        }
+
+        .downloads-hero {
+            animation: dlFadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .download-platforms-grid {
+            animation: dlCardPop 0.6s 0.14s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .installation-steps .step-card:nth-child(1) {
+            animation: dlFadeUp 0.5s 0.26s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .installation-steps .step-card:nth-child(2) {
+            animation: dlFadeUp 0.5s 0.36s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .installation-steps .step-card:nth-child(3) {
+            animation: dlFadeUp 0.5s 0.46s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        footer.footer {
+            animation: dlFadeUp 0.5s 0.32s cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+    </style>
+</head>
+<body>
+    <!-- 3D Space Canvas Background -->
+    <canvas id="space-canvas"></canvas>
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand">
+                <img src="assets/app-icon.png" alt="Lightcord" class="brand-logo-img">
+                <span class="brand-text">Lightcord</span>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#hero">Overview</a></li>
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#showcase">Interface</a></li>
+                    <li><a href="index.html#themes">Themes</a></li>
+                    <li><a href="downloads.html" class="active">Downloads</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="downloads.html" class="btn btn-primary nav-download-btn">
+                    <i class="fas fa-arrow-down"></i> <span>Download</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="downloads-hero">
+            <div class="container">
+                <span class="pill-badge"><i class="fas fa-download"></i> Releases</span>
+                <h1>Download Lightcord</h1>
+                <p style="max-width: 580px; margin: 0 auto; font-size: 1.05rem; color: var(--text-secondary);">
+                    Select your operating system to download the latest production build (v2.4.0). Completely standalone with 350+ plugins pre-installed.
+                </p>
+                <div class="detected-os" id="detected-os-badge" style="justify-content: center; margin-top: 16px;">
+                    <i class="fab fa-windows"></i> Detected for <strong>Windows 10/11</strong> (64-bit)
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Cards Grid (Windows 10/11 & macOS) -->
+        <section class="download-section" style="padding-top: 0; border-top: none;">
+            <div class="container">
+                <div class="download-platforms-grid">
+                    <!-- Windows 10/11 Platform Card -->
+                    <div class="platform-card recommended" id="download-windows">
+                        <span class="platform-badge">Recommended for Windows</span>
+                        <div class="platform-icon">
+                            <i class="fab fa-windows"></i>
+                        </div>
+                        <h3 class="platform-name">Windows 10 / 11</h3>
+                        <p class="platform-specs">Native standalone installer for Windows 10 &amp; 11 with automated background updater</p>
+
+                        <div class="platform-actions">
+                            <button class="btn btn-primary btn-download-action" data-platform="Windows 10/11" data-filename="Lightcord-Setup-v2.4.0">
+                                <i class="fas fa-download"></i> <span>Download Setup</span>
+                            </button>
+                        </div>
+
+                        <div class="platform-alt-links">
+                            <span>Channel:</span>
+                            <span>Stable Build v2.4.0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3-Step Setup Guide -->
+                <div class="installation-steps">
+                    <div class="step-card">
+                        <div class="step-num">1</div>
+                        <h4>Download Setup</h4>
+                        <p>Click Download Setup to retrieve the installer configured for your operating system.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">2</div>
+                        <h4>Launch Installer</h4>
+                        <p>Run the setup wizard. Lightcord establishes its isolated environment with zero conflict to official Discord.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">3</div>
+                        <h4>Enjoy 350+ Plugins</h4>
+                        <p>Sign in with your Discord account, open Settings &rarr; Lightcord, and toggle any plugin or theme instantly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lightcord Community. Not affiliated with Discord Inc.</p>
+                <p><a href="index.html" style="color:var(--text-secondary);"><i class="fas fa-arrow-left"></i> Back to Overview</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Download Progress Modal -->
+    <div class="modal-overlay" id="download-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-card">
+            <button class="modal-close-btn" id="download-modal-close" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+                <img src="assets/app-icon.png" style="width:40px; height:40px; border-radius:8px;" alt="Lightcord">
+                <div>
+                    <h3 style="font-size:1.15rem; color:#fff;">Downloading Lightcord</h3>
+                    <p style="font-size:0.84rem; color:var(--text-secondary);" id="download-modal-platform">Windows 10/11</p>
+                </div>
+            </div>
+
+            <p style="font-size:0.86rem; color:var(--text-secondary);" id="download-status-text">Connecting to high-speed CDN...</p>
+
+            <div class="modal-progress-wrap">
+                <div class="modal-progress-bar-bg">
+                    <div class="modal-progress-bar" id="download-progress-bar"></div>
+                </div>
+            </div>
+
+            <div style="background:#141726; border:1px solid var(--border-subtle); border-radius:8px; padding:12px; margin-top:14px;">
+                <div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:3px;">PACKAGE</div>
+                <div style="font-family:var(--font-mono); font-size:0.82rem; color:#ffffff;" id="download-modal-filename">Lightcord-Setup-v2.4.0</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/space-canvas.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    (function () {
+        var _els = ['.downloads-hero', '.download-platforms-grid', '.installation-steps', 'footer.footer'];
+        document.querySelectorAll('a[href]').forEach(function (a) {
+            var h = a.getAttribute('href');
+            if (!h || h.charAt(0) === '#' || h.indexOf('http') === 0 || a.target === '_blank') return;
+            a.addEventListener('click', function (e) {
+                e.preventDefault();
+                var dest = h;
+                _els.forEach(function (sel) {
+                    var el = document.querySelector(sel);
+                    if (el) el.style.animation = 'dlFadeOut 0.22s ease forwards';
+                });
+                setTimeout(function () { window.location.href = dest; }, 200);
+            });
+        });
+    })();
+    </script>
+</body>
+</html>

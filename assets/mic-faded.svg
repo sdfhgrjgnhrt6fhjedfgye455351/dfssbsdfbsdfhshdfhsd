@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" fill="none">
+    <defs>
+        <linearGradient id="micGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+            <stop offset="50%" stop-color="#a5b4fc" stop-opacity="0.6" />
+            <stop offset="100%" stop-color="#6366f1" stop-opacity="0.3" />
+        </linearGradient>
+        <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#6366f1" stop-opacity="0" />
+            <stop offset="50%" stop-color="#818cf8" stop-opacity="0.5" />
+            <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+        </linearGradient>
+    </defs>
+
+    <!-- Faded Acoustic Aura Waves -->
+    <circle cx="250" cy="220" r="180" stroke="url(#ringGrad)" stroke-width="1.5" stroke-dasharray="6 6" />
+    <circle cx="250" cy="220" r="220" stroke="url(#ringGrad)" stroke-width="1" stroke-dasharray="8 8" />
+    <circle cx="250" cy="220" r="260" stroke="url(#ringGrad)" stroke-width="0.75" />
+
+    <!-- Microphone Capsule Outer Frame -->
+    <rect x="180" y="90" width="140" height="230" rx="70" stroke="url(#micGrad)" stroke-width="4" fill="rgba(15, 18, 33, 0.4)" />
+
+    <!-- Capsule Mesh / Grille Lines -->
+    <path d="M185 160 H315" stroke="url(#micGrad)" stroke-width="2" />
+    <path d="M190 190 H310" stroke="url(#micGrad)" stroke-width="2" />
+    <path d="M190 220 H310" stroke="url(#micGrad)" stroke-width="2" />
+    <path d="M185 250 H315" stroke="url(#micGrad)" stroke-width="2" />
+    <path d="M210 110 V250" stroke="url(#micGrad)" stroke-width="1.5" stroke-dasharray="3 3" />
+    <path d="M250 95 V260" stroke="url(#micGrad)" stroke-width="2" />
+    <path d="M290 110 V250" stroke="url(#micGrad)" stroke-width="1.5" stroke-dasharray="3 3" />
+
+    <!-- Capsule Center Accent Ring -->
+    <rect x="176" y="210" width="148" height="12" rx="4" stroke="url(#micGrad)" stroke-width="2" fill="rgba(99, 102, 241, 0.2)" />
+
+    <!-- U-Shaped Shock Mount / Pivot Fork -->
+    <path d="M140 220 C140 340 360 340 360 220" stroke="url(#micGrad)" stroke-width="5" fill="none" stroke-linecap="round" />
+    
+    <!-- Shock Mount Screws / Knobs -->
+    <circle cx="140" cy="220" r="12" stroke="url(#micGrad)" stroke-width="3" fill="#101424" />
+    <circle cx="360" cy="220" r="12" stroke="url(#micGrad)" stroke-width="3" fill="#101424" />
+
+    <!-- Central Stem & Connection Joint -->
+    <path d="M250 320 V410" stroke="url(#micGrad)" stroke-width="6" stroke-linecap="round" />
+    
+    <!-- Articulation Joint -->
+    <circle cx="250" cy="410" r="16" stroke="url(#micGrad)" stroke-width="4" fill="#0d111e" />
+    <circle cx="250" cy="410" r="6" fill="#818cf8" />
+
+    <!-- Lower Support Tube -->
+    <path d="M250 426 V520" stroke="url(#micGrad)" stroke-width="8" stroke-linecap="round" />
+
+    <!-- Heavy Studio Base -->
+    <ellipse cx="250" cy="530" rx="120" ry="24" stroke="url(#micGrad)" stroke-width="4" fill="rgba(15, 18, 33, 0.7)" />
+    <ellipse cx="250" cy="530" rx="90" ry="16" stroke="url(#micGrad)" stroke-width="1.5" />
+</svg>

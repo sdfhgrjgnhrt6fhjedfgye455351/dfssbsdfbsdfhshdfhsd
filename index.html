@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Lightcord — Discord Mod Client | 350+ Plugins &amp; Themes</title>
+    <meta name="description" content="Lightcord — Enhanced Discord client packed with 350+ plugins, 500+ themes, native voice MusicBot, and 3D Voice.">
+
+    <!-- Discord / Open Graph Embed -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lightcord — Enhanced Discord Client for Power Users">
+    <meta property="og:description" content="350+ plugins, 500+ community themes, native 3D spatial voice, and zero telemetry. The Discord client built for speed and power users.">
+    <meta property="og:image" content="https://lightcord.one/assets/logo.png">
+    <meta property="og:url" content="https://lightcord.one/">
+    <meta name="theme-color" content="#5865f2">
+
+    <meta name="keywords" content="Lightcord, lightcord discord, lightcord download, discord lightcord, download lightcord, how to uninstall lightcord, lightcord discord download, lightcord github, lightcord installer, lightcord mobile, lightcord alternative, betterdiscord lightcord, custom discord client, lightcord themes download, lightcord plugins 2025, discord modification, Discord mod, Discord client mod, Discord enhancement, Discord themes, Discord plugins, Discord custom themes, Discord dark theme, Discord 3D theme, 3D Discord, Discord makeover, Discord UI mod, BetterDiscord alternative, Discord modded client, Discord skin, Discord custom client, Discord plugin manager, Discord theme installer, cool Discord themes, best Discord mods, Discord aesthetic, Discord glow effect, Discord animated theme, Discord transparent theme, Discord glassmorphism, Discord midnight theme, Discord dark matter, Discord free download, Discord Windows mod, Discord macOS mod, Discord client 2025, Discord enhancement project, Discord rich presence custom, Discord overlay">
+    
+    <link rel="icon" type="image/svg+xml" href="assets/favicon-bolt.svg">
+    <link rel="icon" type="image/png" href="assets/favicon-bolt.png">
+    <link rel="apple-touch-icon" href="assets/favicon-bolt.png">
+    <link rel="canonical" href="https://lightcord.one/">
+
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Lightcord",
+      "url": "https://lightcord.one/"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Lightcord",
+      "operatingSystem": "Windows 10, Windows 11",
+      "applicationCategory": "CommunicationApplication",
+      "softwareVersion": "2.4.0",
+      "description": "Performance-tuned, privacy-first Discord client pre-bundled with 350+ plugins, 500+ community themes, and native 3D spatial voice. Built for speed, clarity, and zero background telemetry.",
+      "url": "https://lightcord.one/",
+      "downloadUrl": "https://lightcord.one/downloads.html",
+      "screenshot": "https://lightcord.one/assets/screenshot-settings.png",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "2847"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Lightcord safe to use on my Discord account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Lightcord strips all client-side telemetry trackers. It uses the standard Discord desktop client user-agent and respects Discord API rate limits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I enable 3D Voice and spatial audio in Lightcord?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Open Discord Settings then Lightcord then Plugins and enable 3D Voice. The client will calculate HRTF directional audio based on your speaker setup or stereo headphones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use BetterDiscord themes with Lightcord?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, 100% compatible. Simply place any .theme.css into your themes folder or paste the theme URL directly into the Online Themes input in Lightcord Settings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Lightcord interfere with the official Discord app?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Lightcord operates as a standalone executable in its own directory and will not modify or conflict with your official Discord client."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @keyframes dlFadeUp {
+            from { opacity: 0; transform: translateY(22px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes dlCardPop {
+            from { opacity: 0; transform: translateY(28px) scale(0.97); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .hero-tagline       { animation: dlFadeUp  0.50s 0.00s cubic-bezier(0.22,1,0.36,1) both; }
+        .hero-title         { animation: dlFadeUp  0.55s 0.08s cubic-bezier(0.22,1,0.36,1) both; }
+        .hero-description   { animation: dlFadeUp  0.50s 0.16s cubic-bezier(0.22,1,0.36,1) both; }
+        .hero-cta-group     { animation: dlFadeUp  0.50s 0.24s cubic-bezier(0.22,1,0.36,1) both; }
+        .detected-os        { animation: dlFadeUp  0.50s 0.30s cubic-bezier(0.22,1,0.36,1) both; }
+        .hero-trust-badges  { animation: dlFadeUp  0.50s 0.36s cubic-bezier(0.22,1,0.36,1) both; }
+        .hero-spec-card     { animation: dlCardPop 0.60s 0.18s cubic-bezier(0.22,1,0.36,1) both; }
+    </style>
+</head>
+<body>
+    <!-- 3D Space Canvas (3D Moving Matrix Grid + Clean Stars) -->
+    <canvas id="space-canvas"></canvas>
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand">
+                <img src="assets/app-icon.png" alt="Lightcord" class="brand-logo-img">
+                <span class="brand-text">Lightcord</span>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#hero">Overview</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#showcase">Interface</a></li>
+                    <li><a href="#themes">Themes</a></li>
+                    <li><a href="#download">Platforms</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="downloads.html" class="btn btn-primary nav-download-btn">
+                    <i class="fas fa-arrow-down"></i> <span>Download</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- =================================================================
+             Hero Section (Requirement 4: Exactly 100vh on Desktop)
+             ================================================================= -->
+        <section class="hero" id="hero">
+            <!-- Faded Studio Microphone Graphic in the Background -->
+            <img src="assets/mic-faded.svg" alt="" class="hero-faded-mic" aria-hidden="true">
+
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <!-- Requirement 3: Thin refined tagline replacing pill badge -->
+                    <div class="hero-tagline">
+                        <span class="hero-tagline-bar"></span>
+                        <span>Engineered for speed &amp; extensibility</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Discord Reimagined for <br>
+                        <span class="accent-text">Power Users.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Lightcord is a performance-tuned, privacy-first Discord client pre-bundled with <strong>350+ plugins</strong>, <strong>500+ community themes</strong>, and native 3D spatial voice. Built for speed, clarity, and zero background telemetry.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="downloads.html" class="btn btn-primary btn-lg" id="hero-download-btn">
+                            <i class="fas fa-download"></i> <span>Download Setup</span>
+                        </a>
+                        <a href="#features" class="btn btn-outline btn-lg">
+                            <span>Explore Features</span> <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="detected-os" id="detected-os-badge">
+                        <i class="fab fa-windows"></i> Detected for <strong>Windows 10/11</strong> (64-bit)
+                    </div>
+
+                    <div class="hero-trust-badges">
+                        <div class="trust-item">
+                            <i class="fas fa-shield-halved"></i> <span>Anti-Ban Protected</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-microchip"></i> <span>Hardware Accelerated</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-spec-card">
+                        <div class="preview-header">
+                            <img src="assets/app-icon.png" alt="Lightcord" class="preview-logo">
+                            <div class="preview-info">
+                                <h4>Lightcord Engine</h4>
+                                <p>Equicord Core • Telemetry Blocked</p>
+                            </div>
+                        </div>
+
+                        <div class="preview-features-list">
+                            <div class="preview-feature-row">
+                                <span><i class="fas fa-headphones"></i> 3D Spatial Audio</span>
+                                <div class="sim-switch active"></div>
+                            </div>
+                            <div class="preview-feature-row">
+                                <span><i class="fas fa-music"></i> Voice MusicBot</span>
+                                <div class="sim-switch active"></div>
+                            </div>
+                            <div class="preview-feature-row">
+                                <span><i class="fas fa-image"></i> BetterImages Raw</span>
+                                <div class="sim-switch active"></div>
+                            </div>
+                            <div class="preview-feature-row">
+                                <span><i class="fas fa-chart-line"></i> Guild ServerStats</span>
+                                <div class="sim-switch active"></div>
+                            </div>
+                            <div class="preview-feature-row">
+                                <span><i class="fas fa-filter"></i> Regex ChatFilter</span>
+                                <div class="sim-switch active"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             Requirement 5: Infinite Moving Marquee Ticker Tape Ribbon
+             Smooth seamless leftward loop with extra metrics
+             ================================================================= -->
+        <section class="marquee-section" id="stats">
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    <!-- Primary Set -->
+                    <div class="marquee-item">
+                        <span class="marquee-val">10K+</span>
+                        <div class="marquee-details">
+                            <span class="marquee-label">Active Users</span>
+                            <span class="marquee-sub">Worldwide desktop installations</span>
+                        </div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <span class="marquee-val">500+</span>
+                        <div class="marquee-details">
+                            <span class="marquee-label">Themes</span>
+                            <span class="marquee-sub">BetterDiscord &amp; CSS compatible</span>
+                        </div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <span class="marquee-val">350+</span>
+                        <div class="marquee-details">
+                            <span class="marquee-label">Plugins</span>
+                            <span class="marquee-sub">Pre-bundled &amp; toggleable</span>
+                        </div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <span class="marquee-val">3D Voice</span>
+                        <div class="marquee-details">
+                            <span class="marquee-label">Spatial Audio</span>
+                            <span class="marquee-sub">HRTF 360° sound positioning</span>
+                        </div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <span class="marquee-val">0%</span>
+                        <div class="marquee-details">
+                            <span class="marquee-label">Telemetry</span>
+                            <span class="marquee-sub">Tracking stripped &amp; blocked</span>
+                        </div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <span class="marquee-val">Lossless</span>
+                        <div class="marquee-details">
+                            <span class="marquee-label">MusicBot</span>
+                            <span class="marquee-sub">48kHz stereo voice streaming</span>
+                        </div>
+                    </div>
+
+                    <div class="marquee-item">
+                        <span class="marquee-val">60 FPS</span>
+                        <div class="marquee-details">
+                            <span class="marquee-label">Hardware Acceleration</span>
+                            <span class="marquee-sub">Optimized rendering pipeline</span>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate Set for Seamless Infinite Loop -->
+                    <div class="marquee-item" aria-hidden="true">
+                        <span class="marquee-val">10K+</span>
+                        <div class="marquee-details">
+                            <span class="marquee-label">Active Users</span>
+                            <span class="marquee-sub">Worldwide desktop installations</span>
+                        </div>
+                    </div>
+
+                    <div class="marquee-item" aria-hidden="true">
+                        <span class="marquee-val">500+</span>
+                        <div class="marquee-details">
+                            <span class="marquee-label">Themes</span>
+                            <span class="marquee-sub">BetterDiscord &amp; CSS compatible</span>
+                        </div>
+                    </div>
+
+                    <div class="marquee-item" aria-hidden="true">
+                        <span class="marquee-val">350+</span>
+                        <div class="marquee-details">
+                            <span class="marquee-label">Plugins</span>
+                            <span class="marquee-sub">Pre-bundled &amp; toggleable</span>
+                        </div>
+                    </div>
+
+                    <div class="marquee-item" aria-hidden="true">
+                        <span class="marquee-val">3D Voice</span>
+                        <div class="marquee-details">
+                            <span class="marquee-label">Spatial Audio</span>
+                            <span class="marquee-sub">HRTF 360° sound positioning</span>
+                        </div>
+                    </div>
+
+                    <div class="marquee-item" aria-hidden="true">
+                        <span class="marquee-val">0%</span>
+                        <div class="marquee-details">
+                            <span class="marquee-label">Telemetry</span>
+                            <span class="marquee-sub">Tracking stripped &amp; blocked</span>
+                        </div>
+                    </div>
+
+                    <div class="marquee-item" aria-hidden="true">
+                        <span class="marquee-val">Lossless</span>
+                        <div class="marquee-details">
+                            <span class="marquee-label">MusicBot</span>
+                            <span class="marquee-sub">48kHz stereo voice streaming</span>
+                        </div>
+                    </div>
+
+                    <div class="marquee-item" aria-hidden="true">
+                        <span class="marquee-val">60 FPS</span>
+                        <div class="marquee-details">
+                            <span class="marquee-label">Hardware Acceleration</span>
+                            <span class="marquee-sub">Optimized rendering pipeline</span>
+                        </div>
+                    </div>
+
+                    <div class="marquee-item" aria-hidden="true">
+                        <span class="marquee-val">100%</span>
+                        <div class="marquee-details">
+                            <span class="marquee-label">Open Source</span>
+                            <span class="marquee-sub">Auditable community codebase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             8 Features Grid (4 on Top, 4 Below, Roomy Cards)
+             ================================================================= -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <span class="pill-badge"><i class="fas fa-layer-group"></i> Architecture</span>
+                    <h2 class="section-title">Engineered Capabilities</h2>
+                    <p class="section-subtitle">Lightcord bundles key enhancements directly into the client runtime without third-party bot tokens or complicated manual injections.</p>
+                </div>
+
+                <!-- 4x2 Grid (4 cards top, 4 cards bottom) -->
+                <div class="features-grid-8">
+                    <!-- 1. MusicBot -->
+                    <div class="feature-large-card">
+                        <div class="feature-card-icon-wrap">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3 class="feature-card-title">MusicBot</h3>
+                        <p class="feature-card-desc">Lossless 48kHz stereo streaming directly into any voice channel. Features multi-track queuing, dynamic synchronized lyrics, volume normalization, and EQ boost without server bot invites.</p>
+                    </div>
+
+                    <!-- 2. BetterImages -->
+                    <div class="feature-large-card">
+                        <div class="feature-card-icon-wrap">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <h3 class="feature-card-title">BetterImages</h3>
+                        <p class="feature-card-desc">Bypasses Discord's 8MB webp downscaling. Click any media to inspect at native uncompressed resolution, zoom up to 400%, rotate on the fly, and batch-download entire photo galleries.</p>
+                    </div>
+
+                    <!-- 3. ServerStats -->
+                    <div class="feature-large-card">
+                        <div class="feature-card-icon-wrap">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h3 class="feature-card-title">ServerStats</h3>
+                        <p class="feature-card-desc">Live member telemetry pinned directly above your server channels. Real-time online ratios, voice room activity counters, role demographics, and daily join rate analytics.</p>
+                    </div>
+
+                    <!-- 4. Timestamps -->
+                    <div class="feature-large-card">
+                        <div class="feature-card-icon-wrap">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="feature-card-title">Timestamps</h3>
+                        <p class="feature-card-desc">Precision message timing with automatic local timezone conversion. Hover over any chat entry to see exact millisecond creation timestamps, dynamic countdown timers, and relative offsets.</p>
+                    </div>
+
+                    <!-- 5. ChatFilter -->
+                    <div class="feature-large-card">
+                        <div class="feature-card-icon-wrap">
+                            <i class="fas fa-shield-virus"></i>
+                        </div>
+                        <h3 class="feature-card-title">ChatFilter</h3>
+                        <p class="feature-card-desc">Client-side regex firewall. Silently suppress ghost-pings, mute repetitive spam phrases, mask nuisance emojis, and block scam links before they enter your chat viewport.</p>
+                    </div>
+
+                    <!-- 6. GameActivity -->
+                    <div class="feature-large-card">
+                        <div class="feature-card-icon-wrap">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3 class="feature-card-title">GameActivity</h3>
+                        <p class="feature-card-desc">Custom Rich Presence (RPC) builder. Spoof game titles, customize state banners, stream status icons, party counters, and elapsed playtime with zero external apps.</p>
+                    </div>
+
+                    <!-- 7. Follow User -->
+                    <div class="feature-large-card">
+                        <div class="feature-card-icon-wrap">
+                            <i class="fas fa-satellite-dish"></i>
+                        </div>
+                        <h3 class="feature-card-title">Follow User</h3>
+                        <p class="feature-card-desc">Follow any user and automatically jump into every voice channel they enter — no manual tracking, no missed sessions.</p>
+                    </div>
+
+                    <!-- 8. 3D Voice -->
+                    <div class="feature-large-card">
+                        <div class="feature-card-icon-wrap">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <h3 class="feature-card-title">3D Voice</h3>
+                        <p class="feature-card-desc">Spatial 3D audio engine for Discord voice calls. Real-time HRTF positional sound calculations simulate 360-degree acoustic positioning and distance attenuation for an immersive spatial soundstage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             3D Coverflow Showcase Carousel (With User's Screenshots)
+             ================================================================= -->
+        <section class="showcase-section" id="showcase">
+            <div class="container">
+                <div class="section-header">
+                    <span class="pill-badge"><i class="fas fa-desktop"></i> Interface</span>
+                    <h2 class="section-title">Built for Direct Control</h2>
+                    <p class="section-subtitle">Browse Lightcord's clean interface settings, plugin manager, and theme ecosystem.</p>
+                </div>
+
+                <div class="carousel-stage">
+                    <button class="carousel-btn prev" id="carousel-prev" aria-label="Previous Slide">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <div class="carousel-track" id="carousel-track">
+                        <!-- Slide 1: Client Settings -->
+                        <div class="carousel-card active" data-index="0">
+                            <img src="assets/screenshot-settings.png" alt="Lightcord Client Settings">
+                            <div class="card-zoom-badge"><i class="fas fa-search-plus"></i> Zoom</div>
+                        </div>
+
+                        <!-- Slide 2: Plugins Management -->
+                        <div class="carousel-card next" data-index="1">
+                            <img src="assets/screenshot-plugins.png" alt="Lightcord 350+ Plugins Hub">
+                            <div class="card-zoom-badge"><i class="fas fa-search-plus"></i> Zoom</div>
+                        </div>
+
+                        <!-- Slide 3: Themes Management -->
+                        <div class="carousel-card prev" data-index="2">
+                            <img src="assets/screenshot-themes.png" alt="Lightcord Theme Management">
+                            <div class="card-zoom-badge"><i class="fas fa-search-plus"></i> Zoom</div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-btn next" id="carousel-next" aria-label="Next Slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="carousel-caption-wrap">
+                    <h3 class="carousel-caption-title" id="carousel-caption-title">Client Engine &amp; Power Controls</h3>
+                    <p class="carousel-caption-desc" id="carousel-caption-desc">Full control over Discord internals. Configure custom Rich Presence, freeze battery-draining animations with Motion Pause, hide cosmetic clutter, and streamline your client experience.</p>
+                    <div class="carousel-dots" id="carousel-dots"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             Themes Showcase Section (BetterDiscord Redirect)
+             ================================================================= -->
+        <section class="themes-section" id="themes">
+            <div class="container">
+                <div class="section-header">
+                    <span class="pill-badge"><i class="fas fa-brush"></i> Themes</span>
+                    <h2 class="section-title">Curated Themes Directory</h2>
+                    <p class="section-subtitle">Select any theme below to preview and download directly via the BetterDiscord official theme directory.</p>
+                </div>
+
+                <div class="themes-toolbar">
+                    <div class="themes-filter-group">
+                        <button class="theme-filter-btn active" data-category="all">All Themes</button>
+                        <button class="theme-filter-btn" data-category="indigo">Dark &amp; Indigo</button>
+                        <button class="theme-filter-btn" data-category="cosmic">Cosmic Space</button>
+                        <button class="theme-filter-btn" data-category="cyberpunk">Cyberpunk Neon</button>
+                        <button class="theme-filter-btn" data-category="minimal">AMOLED Minimal</button>
+                    </div>
+
+                    <div class="theme-search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="theme-search" class="theme-search-input" placeholder="Search themes (e.g. Midnight, Cosmic)...">
+                    </div>
+                </div>
+
+                <div class="themes-grid">
+                    <!-- Theme 1 -->
+                    <div class="theme-card" data-category="indigo" data-tags="dark indigo glassmorphism modern">
+                        <div class="theme-preview-wrap">
+                            <img src="assets/themes/theme_midnight_indigo.jpg" alt="Midnight Indigo">
+                            <span class="theme-category-tag">Indigo Dark</span>
+                            <div class="theme-hover-overlay">
+                                <a href="https://betterdiscord.app/themes" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary theme-download-btn">
+                                    <i class="fas fa-download"></i> Download Theme
+                                </a>
+                            </div>
+                        </div>
+                        <div class="theme-body">
+                            <div class="theme-meta-top">
+                                <h4 class="theme-title">Midnight Indigo</h4>
+                                <span class="theme-rating"><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                            <p class="theme-desc">Sleek frosted panels with clean indigo indicators and deep navy backgrounds.</p>
+                            <div class="theme-footer">
+                                <span class="theme-author">By <span>AlexDesign</span> • 28.4K DLs</span>
+                                <a href="https://betterdiscord.app/themes" target="_blank" rel="noopener noreferrer" class="theme-download-btn">
+                                    <i class="fas fa-download"></i> Get Theme
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Theme 2 -->
+                    <div class="theme-card" data-category="cosmic" data-tags="space cosmic stars purple galaxy">
+                        <div class="theme-preview-wrap">
+                            <img src="assets/themes/theme_cosmic_space.jpg" alt="Cosmic Drift">
+                            <span class="theme-category-tag">Cosmic Space</span>
+                            <div class="theme-hover-overlay">
+                                <a href="https://betterdiscord.app/themes" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary theme-download-btn">
+                                    <i class="fas fa-download"></i> Download Theme
+                                </a>
+                            </div>
+                        </div>
+                        <div class="theme-body">
+                            <div class="theme-meta-top">
+                                <h4 class="theme-title">Cosmic Drift</h4>
+                                <span class="theme-rating"><i class="fas fa-star"></i> 5.0</span>
+                            </div>
+                            <p class="theme-desc">Deep space nebula layout with pin-point stars and clean translucent chat bubbles.</p>
+                            <div class="theme-footer">
+                                <span class="theme-author">By <span>AstroNova</span> • 34.2K DLs</span>
+                                <a href="https://betterdiscord.app/themes" target="_blank" rel="noopener noreferrer" class="theme-download-btn">
+                                    <i class="fas fa-download"></i> Get Theme
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Theme 3 -->
+                    <div class="theme-card" data-category="cyberpunk" data-tags="cyberpunk neon pink cyan">
+                        <div class="theme-preview-wrap">
+                            <img src="assets/themes/theme_cyberpunk_neon.jpg" alt="Neon CyberNet">
+                            <span class="theme-category-tag">Cyberpunk</span>
+                            <div class="theme-hover-overlay">
+                                <a href="https://betterdiscord.app/themes" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary theme-download-btn">
+                                    <i class="fas fa-download"></i> Download Theme
+                                </a>
+                            </div>
+                        </div>
+                        <div class="theme-body">
+                            <div class="theme-meta-top">
+                                <h4 class="theme-title">Neon CyberNet</h4>
+                                <span class="theme-rating"><i class="fas fa-star"></i> 4.8</span>
+                            </div>
+                            <p class="theme-desc">High-contrast UI with neon cyan circuit highlights and hot magenta active channels.</p>
+                            <div class="theme-footer">
+                                <span class="theme-author">By <span>RebelSystem</span> • 19.8K DLs</span>
+                                <a href="https://betterdiscord.app/themes" target="_blank" rel="noopener noreferrer" class="theme-download-btn">
+                                    <i class="fas fa-download"></i> Get Theme
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Theme 4 -->
+                    <div class="theme-card" data-category="indigo" data-tags="frosted transparent clear">
+                        <div class="theme-preview-wrap" style="background:#131726; display:flex; align-items:center; justify-content:center;">
+                            <div style="text-align:center; padding:20px;">
+                                <i class="fas fa-cube" style="font-size:3rem; color:#818cf8; margin-bottom:10px;"></i>
+                                <div style="font-weight:700; color:#fff; font-size:0.95rem;">CLEARVISION FROST</div>
+                            </div>
+                            <span class="theme-category-tag">Transparent</span>
+                            <div class="theme-hover-overlay">
+                                <a href="https://betterdiscord.app/themes" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary theme-download-btn">
+                                    <i class="fas fa-download"></i> Download Theme
+                                </a>
+                            </div>
+                        </div>
+                        <div class="theme-body">
+                            <div class="theme-meta-top">
+                                <h4 class="theme-title">ClearVision V6</h4>
+                                <span class="theme-rating"><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                            <p class="theme-desc">Classic translucent discord theme with custom desktop wallpaper transparency.</p>
+                            <div class="theme-footer">
+                                <span class="theme-author">By <span>Untruthful</span> • 92.1K DLs</span>
+                                <a href="https://betterdiscord.app/themes" target="_blank" rel="noopener noreferrer" class="theme-download-btn">
+                                    <i class="fas fa-download"></i> Get Theme
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Theme 5 -->
+                    <div class="theme-card" data-category="minimal" data-tags="amoled black minimal clean">
+                        <div class="theme-preview-wrap" style="background:#020204; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center;">
+                            <div style="text-align:center; padding:20px;">
+                                <i class="fas fa-moon" style="font-size:3rem; color:#f8fafc; margin-bottom:10px;"></i>
+                                <div style="font-weight:700; color:#fff; font-size:0.95rem;">AMOLED VOID</div>
+                            </div>
+                            <span class="theme-category-tag">AMOLED Void</span>
+                            <div class="theme-hover-overlay">
+                                <a href="https://betterdiscord.app/themes" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary theme-download-btn">
+                                    <i class="fas fa-download"></i> Download Theme
+                                </a>
+                            </div>
+                        </div>
+                        <div class="theme-body">
+                            <div class="theme-meta-top">
+                                <h4 class="theme-title">AMOLED Blackout</h4>
+                                <span class="theme-rating"><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                            <p class="theme-desc">True 100% pitch-black layout optimized for OLED monitors and battery efficiency.</p>
+                            <div class="theme-footer">
+                                <span class="theme-author">By <span>VoidLab</span> • 44.5K DLs</span>
+                                <a href="https://betterdiscord.app/themes" target="_blank" rel="noopener noreferrer" class="theme-download-btn">
+                                    <i class="fas fa-download"></i> Get Theme
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Theme 6 -->
+                    <div class="theme-card" data-category="cosmic" data-tags="amber warm cosmic dark">
+                        <div class="theme-preview-wrap" style="background:#1b140f; display:flex; align-items:center; justify-content:center;">
+                            <div style="text-align:center; padding:20px;">
+                                <i class="fas fa-sun" style="font-size:3rem; color:#f59e0b; margin-bottom:10px;"></i>
+                                <div style="font-weight:700; color:#fff; font-size:0.95rem;">SOLARIS PULSE</div>
+                            </div>
+                            <span class="theme-category-tag">Solar Cosmic</span>
+                            <div class="theme-hover-overlay">
+                                <a href="https://betterdiscord.app/themes" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary theme-download-btn">
+                                    <i class="fas fa-download"></i> Download Theme
+                                </a>
+                            </div>
+                        </div>
+                        <div class="theme-body">
+                            <div class="theme-meta-top">
+                                <h4 class="theme-title">Solaris Dark</h4>
+                                <span class="theme-rating"><i class="fas fa-star"></i> 4.7</span>
+                            </div>
+                            <p class="theme-desc">Warm amber highlights across sleek obsidian slate. Relaxing on the eyes during late night sessions.</p>
+                            <div class="theme-footer">
+                                <span class="theme-author">By <span>Helios</span> • 15.3K DLs</span>
+                                <a href="https://betterdiscord.app/themes" target="_blank" rel="noopener noreferrer" class="theme-download-btn">
+                                    <i class="fas fa-download"></i> Get Theme
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="betterdiscord-banner">
+                    <div class="bd-info">
+                        <h3>Discover 500+ Official Themes</h3>
+                        <p>Lightcord natively supports BetterDiscord CSS themes out of the box. Drop your theme files into the themes directory or load directly by URL.</p>
+                    </div>
+                    <a href="https://betterdiscord.app/themes" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-betterdiscord-link">
+                        <i class="fas fa-external-link-alt"></i> <span>Browse on BetterDiscord</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             Download Section
+             ================================================================= -->
+        <section class="download-section" id="download">
+            <div class="container">
+                <div class="section-header">
+                    <span class="pill-badge"><i class="fas fa-download"></i> Releases</span>
+                    <h2 class="section-title">Get Lightcord</h2>
+                    <p class="section-subtitle">Download the stable release for your workstation.</p>
+                </div>
+
+                <div class="download-platforms-grid">
+                    <!-- Windows Card -->
+                    <div class="platform-card recommended" id="download-windows">
+                        <span class="platform-badge">Recommended for Windows</span>
+                        <div class="platform-icon">
+                            <i class="fab fa-windows"></i>
+                        </div>
+                        <h3 class="platform-name">Windows 10 / 11</h3>
+                        <p class="platform-specs">Native standalone installer for Windows 10 &amp; 11 with automated background updater</p>
+
+                        <div class="platform-actions">
+                            <button class="btn btn-primary btn-download-action" data-platform="Windows 10/11" data-filename="Lightcord-Setup-v2.4.0">
+                                <i class="fas fa-download"></i> <span>Download Setup</span>
+                            </button>
+                        </div>
+
+                        <div class="platform-alt-links">
+                            <span>Channel:</span>
+                            <span>Stable Build v2.4.0</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================================
+             FAQ Section
+             ================================================================= -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <span class="pill-badge"><i class="fas fa-circle-question"></i> FAQ</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Straight answers to common technical and safety questions.</p>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item active">
+                        <div class="faq-question">
+                            <span>Is Lightcord safe to use on my Discord account?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Yes. Lightcord strips all client-side telemetry trackers. It uses the standard Discord desktop client user-agent and respects Discord API rate limits.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>How do I enable 3D Voice and spatial audio?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Open Discord Settings &rarr; Lightcord &rarr; Plugins and enable 3D Voice. The client will calculate HRTF directional audio based on your speaker setup or stereo headphones.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I use BetterDiscord themes with Lightcord?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Yes, 100% compatible. Simply place any <code>.theme.css</code> into your themes folder or paste the theme URL directly into the Online Themes input in Lightcord Settings.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Does Lightcord interfere with the official Discord app?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            No. Lightcord operates as a standalone executable in its own directory and will not modify or conflict with your official Discord client.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand">
+                        <img src="assets/app-icon.png" alt="Lightcord" class="brand-logo-img">
+                        <span class="brand-text">Lightcord</span>
+                    </div>
+                    <p>The high-performance Discord client packed with 350+ plugins, 500+ themes, and native 3D spatial voice.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Features</h5>
+                    <ul>
+                        <li><a href="#features">3D Voice Audio</a></li>
+                        <li><a href="#features">MusicBot Player</a></li>
+                        <li><a href="#features">BetterImages</a></li>
+                        <li><a href="#features">ServerStats</a></li>
+                        <li><a href="#features">Timestamps</a></li>
+                        <li><a href="#features">ChatFilter</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Platforms</h5>
+                    <ul>
+                        <li><a href="downloads.html">Windows 10 / 11</a></li>
+                        <li><a href="https://betterdiscord.app/themes" target="_blank" rel="noopener noreferrer">BetterDiscord Themes</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lightcord Community. Not affiliated with or endorsed by Discord Inc.</p>
+                <p>Engine Core Online</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Download Progress Modal -->
+    <div class="modal-overlay" id="download-modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-card">
+            <button class="modal-close-btn" id="download-modal-close" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+                <img src="assets/app-icon.png" style="width:40px; height:40px; border-radius:8px;" alt="Lightcord">
+                <div>
+                    <h3 style="font-size:1.15rem; color:#fff;">Downloading Lightcord</h3>
+                    <p style="font-size:0.84rem; color:var(--text-secondary);" id="download-modal-platform">Windows 10/11</p>
+                </div>
+            </div>
+
+            <p style="font-size:0.86rem; color:var(--text-secondary);" id="download-status-text">Connecting to high-speed CDN...</p>
+
+            <div class="modal-progress-wrap">
+                <div class="modal-progress-bar-bg">
+                    <div class="modal-progress-bar" id="download-progress-bar"></div>
+                </div>
+            </div>
+
+            <div style="background:#141726; border:1px solid var(--border-subtle); border-radius:8px; padding:12px; margin-top:14px;">
+                <div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:3px;">PACKAGE</div>
+                <div style="font-family:var(--font-mono); font-size:0.82rem; color:#ffffff;" id="download-modal-filename">Lightcord-Setup-v2.4.0</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Zoom Modal for Carousel Screenshots -->
+    <div class="lightbox-overlay" id="lightbox-modal">
+        <div class="modal-backdrop lightbox-backdrop"></div>
+        <div class="lightbox-content">
+            <button class="modal-close-btn" id="lightbox-close" style="top:-30px; right:0;" aria-label="Close zoom">
+                <i class="fas fa-times"></i>
+            </button>
+            <img src="" alt="Zoomed Screenshot" id="lightbox-img">
+            <h4 class="lightbox-title" id="lightbox-title"></h4>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/space-canvas.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    (function () {
+        document.querySelectorAll('a[href]').forEach(function (a) {
+            var h = a.getAttribute('href');
+            if (!h || h.charAt(0) === '#' || h.indexOf('http') === 0 || a.target === '_blank') return;
+            a.addEventListener('click', function (e) {
+                e.preventDefault();
+                var dest = h;
+                var m = document.querySelector('main');
+                var f = document.querySelector('footer.footer');
+                var s = 'opacity 0.2s ease, transform 0.2s ease';
+                if (m) { m.style.transition = s; m.style.opacity = '0'; m.style.transform = 'translateY(-10px)'; }
+                if (f) { f.style.transition = 'opacity 0.2s ease'; f.style.opacity = '0'; }
+                setTimeout(function () { window.location.href = dest; }, 185);
+            });
+        });
+    })();
+    </script>
+</body>
+</html>
